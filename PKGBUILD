@@ -1,7 +1,7 @@
 # Maintainer: pheiduck <pheiduck@github.com>
 
 pkgname=clover-efi
-pkgver=5119
+pkgver=5130
 pkgrel=1
 pkgdesc='Bootloader for macOS, Windows and Linux in UEFI and in legacy mode'
 arch=('x86_64')
@@ -10,7 +10,7 @@ license=('BSD')
 backup=('boot/EFI/CLOVER/config.plist')
 source=("https://github.com/CloverHackyColor/CloverBootloader/releases/download/$pkgver/Clover-$pkgver-X64.iso.7z")
 noextract=("Clover-$pkgver-X64.iso.7z")
-sha256sums=('3e2fe9ac2040d51b621add26c0edde15aaa4fab0840c951b4a2dc7cb2c190793')
+sha256sums=('9d8aac06c2f47d538f7693202c35996ad486d0edf1a76d33a41b4b3700af603b')
 
 prepare() {
   rm -rf EFI
