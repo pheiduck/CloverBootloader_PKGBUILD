@@ -1,0 +1,36 @@
+---
+name: Trigger PKGBUILD Test
+
+on:  # yamllint disable-line rule:truthy
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    name: Validate a Pull Request
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Validate PKGBUILD
+        id: validate-pkgbuild
+        uses: 2m/arch-pkgbuild-builder@v1.16
+        with:
+          target: 'pkgbuild'
+          pkgname: 'clover-efi'
+
+
+      - name: Validate binary
+        id: validate-binary
+        uses: 2m/arch-pkgbuild-builder@v1.16
+        with:
+          target: 'run'
+          pkgname: 'clover-efi'
+          command: 'pacman -Q | grep clover-efi'
+
+      - name: yaml-lint
+        uses: ibiqlik/action-yamllint@v3.0.0
+        with:
+          file_or_dir: .github/workflows/ci.yml
