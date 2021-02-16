@@ -1,8 +1,8 @@
 # Maintainer: pheiduck <pheiduck@github.com>
 
-pkgname=clover-efi
+pkgname=clover-efi-bin
 pkgver=5130
-pkgrel=1
+pkgrel=2
 pkgdesc='Bootloader for macOS, Windows and Linux in UEFI and in legacy mode'
 arch=('x86_64')
 url='https://github.com/CloverHackyColor/CloverBootloader'
