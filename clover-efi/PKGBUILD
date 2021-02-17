@@ -9,7 +9,6 @@ source='https://github.com/CloverHackyColor/CloverBootloader'
 _gitcommit=93196411adb599d66c6dbd94668dec8f6c25f960
 license=('BSD')
 conflicts=('refind')
-depends=('sh')
 backup=('boot/EFI/CLOVER/config.plist')
 source=("https://github.com/CloverHackyColor/CloverBootloader/releases/download/$pkgver/Clover-$pkgver-X64.iso.7z")
 noextract=("Clover-$pkgver-X64.iso.7z")
