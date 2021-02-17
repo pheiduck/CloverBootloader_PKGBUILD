@@ -23,7 +23,7 @@ prepare() {
 package() {
   install -dm755 "$pkgdir/boot/EFI"
   install -dm755 "$pkgdir/usr/share/doc"
-  install -dm644 "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+  install -dm644 "$pkgdir/usr/share/licenses/$pkgname/BSD"
 
   install -D "EFI/BOOT/BOOTX64.efi" "$pkgdir/usr/lib/$pkgname/EFI/BOOT/BOOTX64.efi"
 
