@@ -2,12 +2,12 @@
 
 pkgname=clover-efi
 pkgver=5130
-pkgrel=4
+pkgrel=5
 pkgdesc='Bootloader for macOS, Windows and Linux in UEFI and in legacy mode'
 arch=('x86_64')
 source='https://github.com/CloverHackyColor/CloverBootloader'
 _gitcommit=93196411adb599d66c6dbd94668dec8f6c25f960
-license=('BSD' 'custom')
+license=('BSD')
 conflicts=('refind')
 depends=('sh')
 backup=('boot/EFI/CLOVER/config.plist')
@@ -23,6 +23,7 @@ prepare() {
 package() {
   install -dm755 "$pkgdir/boot/EFI"
   install -dm755 "$pkgdir/usr/share/doc"
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 
   install -D "EFI/BOOT/BOOTX64.efi" "$pkgdir/usr/lib/$pkgname/EFI/BOOT/BOOTX64.efi"
 
