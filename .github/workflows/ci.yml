@@ -9,7 +9,7 @@ on:  # yamllint disable-line rule:truthy
 
 jobs:
   validation:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     name: Validate a Pull Request
     steps:
       - uses: actions/checkout@v2.3.4
