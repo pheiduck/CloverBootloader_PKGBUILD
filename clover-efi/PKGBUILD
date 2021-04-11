@@ -1,12 +1,12 @@
 # Maintainer: pheiduck <pheiduck@github.com>
 
 pkgname=clover-efi
-pkgver=5132
-pkgrel=17 #use the number of commits to master since this release
+pkgver=5133
+pkgrel=5 #use the number of commits to master since this release
 pkgdesc='Bootloader for macOS, Windows and Linux in UEFI and in legacy mode'
 arch=('x86_64')
 url='https://github.com/CloverHackyColor/CloverBootloader'
-_gitcommit=ff4e97edde610a73c70411cf419e3198396d19dd
+_gitcommit=fd3b09cf13011fa585f92e19e514d35bc4a5dfc4
 license=('BSD')
 conflicts=('refind' 'opencore-efi')
 backup=('boot/EFI/CLOVER/config.plist')
