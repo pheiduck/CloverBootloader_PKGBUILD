@@ -12,7 +12,7 @@ conflicts=('refind' 'opencore-efi')
 backup=('boot/EFI/CLOVER/config.plist')
 source=("https://github.com/CloverHackyColor/CloverBootloader/releases/download/$pkgver/Clover-$pkgver-X64.iso.7z")
 noextract=("Clover-$pkgver-X64.iso.7z")
-sha256sums=('82811c51ef07e5be6e0f0b5be5e8aec64cb7358e60fbbabe4def9cb608ed9f5e')
+sha256sums=('64ec1604c7876681ec6c8a6e04e8f47725478f3ad2aeccbd265460f9c317f05b')
 
 prepare() {
   rm -rf EFI
