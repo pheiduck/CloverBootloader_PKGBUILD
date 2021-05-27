@@ -31,6 +31,6 @@ jobs:
           command: 'pacman -Q | grep clover-efi'
 
       - name: yaml-lint
-        uses: ibiqlik/action-yamllint@v3.0.1
+        uses: ibiqlik/action-yamllint@v3.0.2
         with:
           file_or_dir: .github/workflows/ci.yml
