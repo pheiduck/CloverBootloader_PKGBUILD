@@ -12,7 +12,7 @@ jobs:
       id: makepkg
       uses: edlanglois/pkgbuild-action@v1
       with:
-        pkgdir: "clover-efi"
+        pkgdir: "./"
     - name: Print Package Files
       run: |
         echo "Successfully created the following package archive"
