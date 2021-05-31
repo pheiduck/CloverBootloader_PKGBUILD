@@ -2,9 +2,9 @@
 
 pkgname=clover-efi
 pkgver=5136
-pkgrel=1 #use the number of commits to main since this release
+pkgrel=2 #use the number of commits to main since this release
 pkgdesc='Bootloader for macOS, Windows and Linux in UEFI and in legacy mode'
-arch=('x86_64')
+arch=('any')
 url='https://github.com/CloverHackyColor/CloverBootloader'
 _gitcommit=8b2af7e287feb545bb1b405b1c8d7747fbfa7ae9
 license=('BSD')
