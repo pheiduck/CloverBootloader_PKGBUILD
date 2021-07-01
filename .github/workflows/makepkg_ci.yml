@@ -6,22 +6,27 @@ jobs:
   pkgbuild:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
+    - 
+      name: Checkout
       uses: actions/checkout@v2
-    - name: Makepkg Build and Check
+    - 
+      name: Makepkg Build and Check
       id: makepkg
       uses: edlanglois/pkgbuild-action@v1.1.7
       with:
         pkgdir: "./"
-    - name: Print Package Files
+    - 
+      name: Print Package Files
       run: |
         echo "Successfully created the following package archive"
         echo "Package: ${{ steps.makepkg.outputs.pkgfile0 }}"
-    - name: Upload Package Archive
+    - 
+      name: Upload Package Archive
       uses: actions/upload-artifact@v2.2.4
       with:
         path: ${{ steps.makepkg.outputs.pkgfile0 }}
-    - name: Create Release
+    - 
+      name: Create Release
       id: create_release
       uses: actions/create-release@v1
       env:
@@ -30,7 +35,8 @@ jobs:
           tag_name: ${{ steps.makepkg.outputs.pkgfile0 }}
           draft: false
           prerelease: false
-    - name: Upload Release Asset
+    - 
+      name: Upload Release Asset
       id: upload-release-asset 
       uses: actions/upload-release-asset@v1
       env:
@@ -40,3 +46,11 @@ jobs:
           asset_path: ./${{ steps.makepkg.outputs.pkgfile0 }}
           asset_name: ${{ steps.makepkg.outputs.pkgfile0 }}
           asset_content_type: application/zst
+    -
+      name: Cleanup Releases
+      uses: dev-drprasad/delete-older-releases@v0.2.0
+      with:
+          repo: pheiduck/CloverBootloader_PKGBUILD
+          keep_latest: 2
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
